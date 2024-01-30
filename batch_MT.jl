@@ -15,6 +15,9 @@ print("Nombre d'arguments : ",length(ARGS),"\n")
 print("Nombre de paramètres variables : ", trunc(Int,(length(ARGS)-1)/4), "\n")
 @everywhere begin
 cd(@__DIR__)
+if !isdir("./output")
+    mkdir("./output")
+end
 include("ArchiSimple_MT.jl")
 #import .ArchiSimple
 

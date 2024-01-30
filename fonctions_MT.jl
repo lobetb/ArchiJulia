@@ -227,9 +227,7 @@ function ouvreFichiers()
   elseif P_exportType == 2
     P_exportExt = ".rsml"
   end
-  if !isdir("./output")
-    mkdir("./output")
-  end
+
   dt = Dates.now()
   P_exportName2 = "./output/"*P_exportName*Dates.format(dt,"yyyymmdd-HHMMSS")*"-"*countSR*P_exportExt
   FSeg=open(P_exportName2,"w")    # Fichier contenant les segments
